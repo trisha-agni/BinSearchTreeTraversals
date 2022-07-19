@@ -1,6 +1,6 @@
 # BinSearchTreeTraversals
-Python implementation of binary search tree, tree traversal algorithms, and a tester class
-In this file I have implemented:
+
+In this file I have implemented the following items in Python:
 1. a binary search tree class
 2. inorder, preorder, and postorder traversal classes
 3. a tester class
