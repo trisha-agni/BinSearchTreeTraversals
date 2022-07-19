@@ -1,0 +1,22 @@
+import random
+from random import randint
+from .bin_search_tree import BSTree
+from .bin_tree_traversals import InorderBinTreeTraverse, PreorderBinTreeTraverse, PostorderBinTreeTraverse
+
+
+class TestTraversals:
+  def __init__(self):
+    self._limit = 15
+    self._max_num = 25
+    self._test_classes = [InorderBinTreeTraverse, PreorderBinTreeTraverse, PostorderBinTreeTraverse]
+
+  def test(self):
+    sz = randint(0, self._limit)
+    rand_lst = random.sample(range(self._max_num), sz)
+    bst_obj = BSTree(rand_lst)
+    for cls in self._test_classes:
+      test_obj = cls(bst_obj.root)
+      test_obj.traverse(bst_obj.root)
+
+tester = TestTraversals()
+tester.test()
